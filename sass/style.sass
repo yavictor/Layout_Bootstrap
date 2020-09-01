@@ -1,6 +1,11 @@
 $azure:  #1eacc7
 $metalBlack: #212121
-  
+$orange_dawn: #ff5656
+
+=btn_hover
+  &:hover
+    background-image: none
+    background-color: $azure
   
 *
   font-family: Roboto, sans-serif
@@ -28,7 +33,7 @@ $metalBlack: #212121
   text-transform: uppercase
   text-align: center
   &_white
-    color:#ffffff
+    color: #ffffff
 
 .subtitle
   color: #222222
@@ -37,7 +42,7 @@ $metalBlack: #212121
   text-align: center
   margin-top: 19px
   &_white
-    color:#ffffff
+    color: #ffffff
 
 
 header
@@ -119,6 +124,7 @@ nav
     font-size: 14px
     font-weight: 400
     text-transform: uppercase
+    +btn_hover
 
 .promo
   min-height: 800px
@@ -163,6 +169,7 @@ nav
     color: #ffffff
     font-size: 18px
     font-weight: 400
+    +btn_hover
 
 .advantages
   min-height: 900px
@@ -227,6 +234,28 @@ nav
       left: 50%
       transform: translateX(-50%)
       cursor: pointer
+      &:before
+        content: ''
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $azure
+        position: absolute
+        top: 12px
+        left: 6px
+      &:after
+        content: ''
+        display: block
+        width: 2px
+        height: 14px
+        background-color: $azure
+        position: absolute
+        top: 6px
+        left: 12px
+      &:hover
+        &:before, &:after
+          background-color: $orange_dawn
+
     &_1  
       background: url('/img/app1bg.jpg') center (center / cover) no-repeat
     &_2  
@@ -243,7 +272,7 @@ nav
 .opportunities_first
   min-height: 499px
   background-color: #070716
-  padding-top: 57px;
+  padding-top: 57px
   .container
     position: relative
     .prius
@@ -255,3 +284,52 @@ nav
 .opportunities_second
   min-height: 397px
   background: url('/img/app_section_bg.jpg') center (center / cover) no-repeat
+
+.terms
+  padding: 68px 0 84px 0
+  &_block
+    margin: 33px 0
+    &_bottom
+      margin-bottom: 0px
+
+  &_title
+    color: $azure
+    font-size: 22px
+    font-weight: 400
+  &_list
+    ul
+      list-style-type: none
+      padding-left: 50px
+      margin-top: 22px
+    li
+      // display: inline-block
+      position: relative
+      color: #222222
+      font-size: 17px
+      font-weight: 300
+      margin-bottom: 10px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -32px
+        top: 3px
+  
+        // display: inline-block
+        // vertical-align: middle
+        // transform: translate(-5px, -2px)
+        width: 21px
+        height: 20px
+        background: url('/icons/blueCheck.png') center (center / cover) no-repeat
+
+    &_summary
+      color: $azure
+      font-weight: 300
+  &_block_bottom
+    .terms_title
+      color: $orange_dawn
+    li:before
+      background: url('/icons/redCheck.png') center (center / cover) no-repeat  
+  
+
+  
