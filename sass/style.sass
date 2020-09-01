@@ -1,3 +1,7 @@
+$azure:  #1eacc7
+$metalBlack: #212121
+  
+  
 *
   font-family: Roboto, sans-serif
 
@@ -13,6 +17,9 @@
   text-align: center
   margin: 0 auto
   margin-bottom: 38px
+  &_white
+    background-color: #ffffff
+    color: #070716
 
 .title
   color: #222222
@@ -20,6 +27,8 @@
   font-weight: 700
   text-transform: uppercase
   text-align: center
+  &_white
+    color:#ffffff
 
 .subtitle
   color: #222222
@@ -27,7 +36,10 @@
   font-weight: 400
   text-align: center
   margin-top: 19px
-  
+  &_white
+    color:#ffffff
+
+
 header
   position: relative
   height: 50px
@@ -36,7 +48,7 @@ nav
   position: fixed
   height: 50px
   width: 100%
-  background-color: #212121
+  background-color: $metalBlack
   z-index: 2
 
 .menu
@@ -101,7 +113,7 @@ nav
     box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
     border: none
     border-radius: 4px
-    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+    background-image: linear-gradient(to top, $azure 0%, #4ce2ff 100%)
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
     color: #ffffff
     font-size: 14px
@@ -146,7 +158,7 @@ nav
     box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
     border: none
     border-radius: 4px
-    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+    background-image: linear-gradient(to top, $azure 0%, #4ce2ff 100%)
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
     color: #ffffff
     font-size: 18px
@@ -169,7 +181,7 @@ nav
       margin-right: 26px
       width: 113px
       height: 113px
-      background-color: #1eacc7
+      background-color: $azure
       border-radius: 50%
   
     .cause
@@ -179,7 +191,7 @@ nav
       font-weight: 300
 
       h3
-        color: #1eacc7
+        color: $azure
         font-size: 17px
         font-weight: 400
 
@@ -227,3 +239,19 @@ nav
       background: url('/img/app5bg.jpg') center (center / cover) no-repeat
     &_6  
       background: url('/img/app6bg.jpg') center (center / cover) no-repeat
+
+.opportunities_first
+  min-height: 499px
+  background-color: #070716
+  padding-top: 57px;
+  .container
+    position: relative
+    .prius
+      position: absolute
+      top: 232px
+      left: 50%
+      transform: translateX(-50%)
+
+.opportunities_second
+  min-height: 397px
+  background: url('/img/app_section_bg.jpg') center (center / cover) no-repeat
